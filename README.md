@@ -16,10 +16,11 @@ This is a simple drop in WKWebView for embedded videos from YouTube and vimeo.
 * Xcode 9 
 
 ## Installation  
-´pod 'TRVideoView'´
+`pod 'TRVideoView'`
 
 ## Usage  
-´// Initialize  
+```swift
+// Initialize  
 let video = TRVideoView(text: "This is some sample text with a YouTube link https://www.youtube.com/watch?v=QPAloq5MCUA")  
 
 // Set frame with this method
@@ -33,4 +34,4 @@ let text = video.textWithoutURLs()
 
 // Finally add it to your view
 self.view.addSubview(video)
-´
+```
