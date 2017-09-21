@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22CFECA61F742B9F00BC9F46 /* TRVideoView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CFEC9C1F742B9F00BC9F46 /* TRVideoView.framework */; };
+		22CFECAB1F742B9F00BC9F46 /* TRVideoViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CFECAA1F742B9F00BC9F46 /* TRVideoViewTests.swift */; };
+		22CFECAD1F742B9F00BC9F46 /* TRVideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CFEC9F1F742B9F00BC9F46 /* TRVideoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22CFECA71F742B9F00BC9F46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22CFEC931F742B9F00BC9F46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22CFEC9B1F742B9F00BC9F46;
+			remoteInfo = TRVideoView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		22CFEC9C1F742B9F00BC9F46 /* TRVideoView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TRVideoView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22CFEC9F1F742B9F00BC9F46 /* TRVideoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRVideoView.h; sourceTree = "<group>"; };
+		22CFECA01F742B9F00BC9F46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22CFECA51F742B9F00BC9F46 /* TRVideoViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TRVideoViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22CFECAA1F742B9F00BC9F46 /* TRVideoViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRVideoViewTests.swift; sourceTree = "<group>"; };
+		22CFECAC1F742B9F00BC9F46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22CFEC981F742B9F00BC9F46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22CFECA21F742B9F00BC9F46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22CFECA61F742B9F00BC9F46 /* TRVideoView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22CFEC921F742B9F00BC9F46 = {
+			isa = PBXGroup;
+			children = (
+				22CFEC9E1F742B9F00BC9F46 /* TRVideoView */,
+				22CFECA91F742B9F00BC9F46 /* TRVideoViewTests */,
+				22CFEC9D1F742B9F00BC9F46 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		22CFEC9D1F742B9F00BC9F46 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22CFEC9C1F742B9F00BC9F46 /* TRVideoView.framework */,
+				22CFECA51F742B9F00BC9F46 /* TRVideoViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22CFEC9E1F742B9F00BC9F46 /* TRVideoView */ = {
+			isa = PBXGroup;
+			children = (
+				22CFEC9F1F742B9F00BC9F46 /* TRVideoView.h */,
+				22CFECA01F742B9F00BC9F46 /* Info.plist */,
+			);
+			path = TRVideoView;
+			sourceTree = "<group>";
+		};
+		22CFECA91F742B9F00BC9F46 /* TRVideoViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				22CFECAA1F742B9F00BC9F46 /* TRVideoViewTests.swift */,
+				22CFECAC1F742B9F00BC9F46 /* Info.plist */,
+			);
+			path = TRVideoViewTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		22CFEC991F742B9F00BC9F46 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22CFECAD1F742B9F00BC9F46 /* TRVideoView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		22CFEC9B1F742B9F00BC9F46 /* TRVideoView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22CFECB01F742B9F00BC9F46 /* Build configuration list for PBXNativeTarget "TRVideoView" */;
+			buildPhases = (
+				22CFEC971F742B9F00BC9F46 /* Sources */,
+				22CFEC981F742B9F00BC9F46 /* Frameworks */,
+				22CFEC991F742B9F00BC9F46 /* Headers */,
+				22CFEC9A1F742B9F00BC9F46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TRVideoView;
+			productName = TRVideoView;
+			productReference = 22CFEC9C1F742B9F00BC9F46 /* TRVideoView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		22CFECA41F742B9F00BC9F46 /* TRVideoViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22CFECB31F742B9F00BC9F46 /* Build configuration list for PBXNativeTarget "TRVideoViewTests" */;
+			buildPhases = (
+				22CFECA11F742B9F00BC9F46 /* Sources */,
+				22CFECA21F742B9F00BC9F46 /* Frameworks */,
+				22CFECA31F742B9F00BC9F46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22CFECA81F742B9F00BC9F46 /* PBXTargetDependency */,
+			);
+			name = TRVideoViewTests;
+			productName = TRVideoViewTests;
+			productReference = 22CFECA51F742B9F00BC9F46 /* TRVideoViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22CFEC931F742B9F00BC9F46 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Tim Roesner";
+				TargetAttributes = {
+					22CFEC9B1F742B9F00BC9F46 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					22CFECA41F742B9F00BC9F46 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 22CFEC961F742B9F00BC9F46 /* Build configuration list for PBXProject "TRVideoView" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 22CFEC921F742B9F00BC9F46;
+			productRefGroup = 22CFEC9D1F742B9F00BC9F46 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22CFEC9B1F742B9F00BC9F46 /* TRVideoView */,
+				22CFECA41F742B9F00BC9F46 /* TRVideoViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22CFEC9A1F742B9F00BC9F46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22CFECA31F742B9F00BC9F46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22CFEC971F742B9F00BC9F46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22CFECA11F742B9F00BC9F46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22CFECAB1F742B9F00BC9F46 /* TRVideoViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22CFECA81F742B9F00BC9F46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22CFEC9B1F742B9F00BC9F46 /* TRVideoView */;
+			targetProxy = 22CFECA71F742B9F00BC9F46 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		22CFECAE1F742B9F00BC9F46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		22CFECAF1F742B9F00BC9F46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		22CFECB11F742B9F00BC9F46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7BT7DC73YL;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TRVideoView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tim.TRVideoView;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22CFECB21F742B9F00BC9F46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7BT7DC73YL;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TRVideoView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tim.TRVideoView;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		22CFECB41F742B9F00BC9F46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7BT7DC73YL;
+				INFOPLIST_FILE = TRVideoViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tim.TRVideoViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22CFECB51F742B9F00BC9F46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7BT7DC73YL;
+				INFOPLIST_FILE = TRVideoViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tim.TRVideoViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22CFEC961F742B9F00BC9F46 /* Build configuration list for PBXProject "TRVideoView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22CFECAE1F742B9F00BC9F46 /* Debug */,
+				22CFECAF1F742B9F00BC9F46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22CFECB01F742B9F00BC9F46 /* Build configuration list for PBXNativeTarget "TRVideoView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22CFECB11F742B9F00BC9F46 /* Debug */,
+				22CFECB21F742B9F00BC9F46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22CFECB31F742B9F00BC9F46 /* Build configuration list for PBXNativeTarget "TRVideoViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22CFECB41F742B9F00BC9F46 /* Debug */,
+				22CFECB51F742B9F00BC9F46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22CFEC931F742B9F00BC9F46 /* Project object */;
+}
