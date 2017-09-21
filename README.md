@@ -16,7 +16,19 @@ This is a simple drop in WKWebView for embedded videos from YouTube and vimeo.
 * Xcode 9 
 
 ## Installation  
-`pod 'TRVideoView'`
+### CocoaPods
+
+To integrate this into your Xcode project using [CocoaPods](https://cocoapods.org), add it to your `Podfile`:
+
+```ruby
+pod 'TRVideoView'
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
 
 ## Usage  
 ```swift
@@ -38,7 +50,7 @@ self.view.addSubview(video)
 
 ## Notes on links
 For YouTube either `https://youtu.be/QPAloq5MCUA` or `https://www.youtube.com/watch?v=QPAloq5MCUA` works.  
-For Vimeo use `https://vimeo.com/86033976`
+For Vimeo use `https://vimeo.com/86033976`  
 Make sure no other parameters are included after the video id otherwise the video won't be found.
 
 ## Contributing 
