@@ -52,8 +52,9 @@ open class TRVideoView: WKWebView {
             
             // If vimeo URL embedded vimeo player
             if(url.absoluteString.contains("vimeo.com")){
-                var link = url.absoluteString
-                link = "https://player.vimeo.com/video/"+link.suffix(9)
+                var link = url.lastPathComponent
+                print(link)
+                link = "https://player.vimeo.com/video/"+link
                 self.loadHTMLString("<iframe src='\(link)' width='\(self.frame.width*3)' height='\(self.frame.height*3)' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>", baseURL: nil)
                 
             // If YouTube URL embedded YouTube player

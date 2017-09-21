@@ -29,5 +29,5 @@ Pod::Spec.new do |s|
   s.source_files = "TRVideoView/**/*.{swift}"
 
   # 9
-  s.resources = "TRVideoView/**/*.{png,jpeg,jpg,storyboard,xib}"
+  #s.resources = "TRVideoView/**/*.{png,jpeg,jpg,storyboard,xib}"
 end
