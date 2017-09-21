@@ -35,3 +35,12 @@ let text = video.textWithoutURLs()
 // Finally add it to your view
 self.view.addSubview(video)
 ```
+
+## Notes on links
+For YouTube either `https://youtu.be/QPAloq5MCUA` or `https://www.youtube.com/watch?v=QPAloq5MCUA` works.  
+For Vimeo use `https://vimeo.com/86033976`
+Make sure no other parameters are included after the video id otherwise the video won't be found.
+
+## Contributing 
+Want to see other video services supported? You can open an issue and I will see what I can do.  
+If you would like to fork this project and add more features, go ahead and make a PR, I'm happy about your contributions. 
