@@ -31,7 +31,13 @@ open class TRVideoView: WKWebView {
         if(self.urls.isEmpty){
             return false
         } else {
-            return true
+            var result = false
+            for url in self.urls{
+                if(url.absoluteString.contains("youtu") || url.absoluteString.contains("vimeo.com")){
+                    result = true
+                }
+            }
+            return result
         }
     }
     
