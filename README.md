@@ -38,7 +38,7 @@ let video = TRVideoView(text: "This is some sample text with a YouTube link http
 // Set frame with this method
 video.frame(x: 0, y: 0, width: 300, height: 150)
 
-// Returns true or false (all urls not just YouTube and Vimeo)
+// Returns true or false (checks for YouTube and Vimeo urls)
 video.containsURLs()
 
 // Returns String with out URLs (i.e. "This is some sample text with a YouTube link")
