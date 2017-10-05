@@ -12,7 +12,7 @@ This is a simple drop in WKWebView for embedded videos from YouTube and vimeo.
 
 ## Requierments
 * iOS 9.0
-* Swift 4.0
+* Swift 3.2
 * Xcode 9 
 
 ## Installation  
