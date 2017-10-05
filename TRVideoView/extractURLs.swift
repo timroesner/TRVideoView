@@ -13,7 +13,7 @@ extension String {
         var urls : [URL] = []
         do {
             let detector = try NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
-            detector.enumerateMatches(in: self, options: [], range: NSMakeRange(0, self.characters.count), using: { (result, _, _) in
+            detector.enumerateMatches(in: self, options: [], range: NSRange(location: 0, length: self.utf16.count), using: { (result, _, _) in
                 if let match = result, let url = match.url {
                     urls.append(url)
                 }

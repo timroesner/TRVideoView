@@ -18,6 +18,7 @@ open class TRVideoView: WKWebView {
         self.init(frame: CGRect(x: 0, y: 0, width: 340, height: 180))
         self.text = text
         self.urls = text.extractURLs()
+        print(self.urls)
         self.scrollView.isScrollEnabled = false
         setup()
     }
@@ -59,16 +60,21 @@ open class TRVideoView: WKWebView {
             // If vimeo URL embedded vimeo player
             if(url.absoluteString.contains("vimeo.com")){
                 var link = url.lastPathComponent
-                print(link)
                 link = "https://player.vimeo.com/video/"+link
-                self.loadHTMLString("<iframe src='\(link)' width='\(self.frame.width*3)' height='\(self.frame.height*3)' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>", baseURL: nil)
+                print(link)
+                DispatchQueue.main.async(execute: { () -> Void in
+                    self.loadHTMLString("<head> <meta name=viewport content='width=device-width, initial-scale=1'><style type='text/css'> body { margin: 0;} </style></head><iframe src='\(link)' width='\(self.frame.width)' height='\(self.frame.height)' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>", baseURL: nil)
+                })
                 
-            // If YouTube URL embedded YouTube player
+                // If YouTube URL embedded YouTube player
             } else if(url.absoluteString.contains("youtu")){
                 var link = url.absoluteString
                 link = "https://www.youtube.com/embed/"+link.suffix(11)+"?rel=0"
-                self.loadHTMLString("<iframe width='\(self.frame.width*3)' height='\(self.frame.height*3)' src='\(link)' frameborder='0' allowfullscreen></iframe>", baseURL: nil)
+                DispatchQueue.main.async(execute: { () -> Void in
+                    self.loadHTMLString("<head> <meta name=viewport content='width=device-width, initial-scale=1'><style type='text/css'> body { margin: 0;} </style></head><iframe width='\(self.frame.width)' height='\(self.frame.height)' src='\(link)' frameborder='0' allowfullscreen></iframe>", baseURL: nil)
+                })
             }
         }
     }
 }
+
