@@ -9,6 +9,8 @@
 import UIKit
 import WebKit
 
+var cacheForTRVideoView = [String : TRVideoView]()
+
 open class TRVideoView: WKWebView {
     
     var text = ""
@@ -18,7 +20,6 @@ open class TRVideoView: WKWebView {
         self.init(frame: CGRect(x: 0, y: 0, width: 340, height: 180))
         self.text = text
         self.urls = text.extractURLs()
-        print(self.urls)
         self.scrollView.isScrollEnabled = false
         setup()
     }
@@ -63,15 +64,15 @@ open class TRVideoView: WKWebView {
                 link = "https://player.vimeo.com/video/"+link
                 print(link)
                 DispatchQueue.main.async(execute: { () -> Void in
-                    self.loadHTMLString("<head> <meta name=viewport content='width=device-width, initial-scale=1'><style type='text/css'> body { margin: 0;} </style></head><iframe src='\(link)' width='\(self.frame.width)' height='\(self.frame.height)' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>", baseURL: nil)
+                    self.loadHTMLString("<head> <meta name=viewport content='width=device-width, initial-scale=1'><style type='text/css'> body { margin: 0;} </style></head><iframe src='\(link)' width='100%' height='100%' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>", baseURL: nil)
                 })
                 
-                // If YouTube URL embedded YouTube player
+            // If YouTube URL embedded YouTube player
             } else if(url.absoluteString.contains("youtu")){
                 var link = url.absoluteString
                 link = "https://www.youtube.com/embed/"+link.suffix(11)+"?rel=0"
                 DispatchQueue.main.async(execute: { () -> Void in
-                    self.loadHTMLString("<head> <meta name=viewport content='width=device-width, initial-scale=1'><style type='text/css'> body { margin: 0;} </style></head><iframe width='\(self.frame.width)' height='\(self.frame.height)' src='\(link)' frameborder='0' allowfullscreen></iframe>", baseURL: nil)
+                    self.loadHTMLString("<head> <meta name=viewport content='width=device-width, initial-scale=1'><style type='text/css'> body { margin: 0;} </style></head><iframe width='100%' height='100%' src='\(link)' frameborder='0' allowfullscreen></iframe>", baseURL: nil)
                 })
             }
         }

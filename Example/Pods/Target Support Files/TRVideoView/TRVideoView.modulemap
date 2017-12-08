@@ -1,0 +1,6 @@
+framework module TRVideoView {
+  umbrella header "TRVideoView-umbrella.h"
+
+  export *
+  module * { export * }
+}

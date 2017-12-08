@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		22CFECA61F742B9F00BC9F46 /* TRVideoView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CFEC9C1F742B9F00BC9F46 /* TRVideoView.framework */; };
-		22CFECAB1F742B9F00BC9F46 /* TRVideoViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CFECAA1F742B9F00BC9F46 /* TRVideoViewTests.swift */; };
 		22CFECAD1F742B9F00BC9F46 /* TRVideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CFEC9F1F742B9F00BC9F46 /* TRVideoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22CFECB71F742C8200BC9F46 /* TRVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CFECB61F742C8200BC9F46 /* TRVideoView.swift */; };
 		22CFECB91F742CD000BC9F46 /* extractURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CFECB81F742CD000BC9F46 /* extractURLs.swift */; };
@@ -29,8 +28,6 @@
 		22CFEC9F1F742B9F00BC9F46 /* TRVideoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRVideoView.h; sourceTree = "<group>"; };
 		22CFECA01F742B9F00BC9F46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22CFECA51F742B9F00BC9F46 /* TRVideoViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TRVideoViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		22CFECAA1F742B9F00BC9F46 /* TRVideoViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRVideoViewTests.swift; sourceTree = "<group>"; };
-		22CFECAC1F742B9F00BC9F46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22CFECB61F742C8200BC9F46 /* TRVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRVideoView.swift; sourceTree = "<group>"; };
 		22CFECB81F742CD000BC9F46 /* extractURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extractURLs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				22CFEC9E1F742B9F00BC9F46 /* TRVideoView */,
-				22CFECA91F742B9F00BC9F46 /* TRVideoViewTests */,
 				22CFEC9D1F742B9F00BC9F46 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,15 +77,6 @@
 				22CFECA01F742B9F00BC9F46 /* Info.plist */,
 			);
 			path = TRVideoView;
-			sourceTree = "<group>";
-		};
-		22CFECA91F742B9F00BC9F46 /* TRVideoViewTests */ = {
-			isa = PBXGroup;
-			children = (
-				22CFECAA1F742B9F00BC9F46 /* TRVideoViewTests.swift */,
-				22CFECAC1F742B9F00BC9F46 /* Info.plist */,
-			);
-			path = TRVideoViewTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +199,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22CFECAB1F742B9F00BC9F46 /* TRVideoViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
