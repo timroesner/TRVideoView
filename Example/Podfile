@@ -6,6 +6,6 @@ target 'VideoTest' do
   use_frameworks!
 
   # Pods for VideoTest
-  pod 'TRVideoView'
+  pod 'TRVideoView', :path => '~/Dropbox/Developer/TRVideoView'
 
 end
