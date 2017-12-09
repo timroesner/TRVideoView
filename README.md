@@ -7,8 +7,8 @@ This is a simple drop in WKWebView for embedded videos from YouTube and vimeo.
 * Check if text has links
 * Return string without links
 * Resize WebView
-<img width="343" alt="screen shot 2017-09-21 at 1 47 28 pm" src="https://user-images.githubusercontent.com/13894518/30718059-9982f632-9ed3-11e7-9169-7e9a5f7244ca.png">
-<img width="337" alt="screen shot 2017-09-21 at 1 48 26 pm" src="https://user-images.githubusercontent.com/13894518/30718060-998a12aa-9ed3-11e7-9158-7a86426c4ab6.png">
+<img width="343" alt="screen shot 2017-09-21 at 1 47 28 pm" src="https://user-images.githubusercontent.com/13894518/33790931-bc11a394-dc39-11e7-8f87-7eeb68aa5d01.png">
+<img width="337" alt="screen shot 2017-09-21 at 1 48 26 pm" src="https://user-images.githubusercontent.com/13894518/33790932-bea56f8c-dc39-11e7-9152-d8825a8098eb.png">
 
 ## Requierments
 * iOS 9.0
@@ -35,8 +35,8 @@ $ pod install
 // Initialize  
 let video = TRVideoView(text: "This is some sample text with a YouTube link https://www.youtube.com/watch?v=QPAloq5MCUA")  
 
-// Set frame with this method
-video.frame(x: 0, y: 0, width: 300, height: 150)
+// Set the frame as always
+video.frame = CGRect(x: 0, y: 0, width: 300, height: 150)
 
 // Returns true or false (checks for YouTube and Vimeo urls)
 video.containsURLs()
@@ -51,7 +51,7 @@ self.view.addSubview(video)
 ## Notes on links
 For YouTube either `https://youtu.be/QPAloq5MCUA` or `https://www.youtube.com/watch?v=QPAloq5MCUA` works.  
 For Vimeo use `https://vimeo.com/86033976`  
-Make sure no other parameters are included after the video id otherwise the video won't be found.
+If other parameters are also included in the link it does not matter, they are sorted out.
 
 ## Contributing 
 Want to see other video services supported? You can open an issue and I will see what I can do.  

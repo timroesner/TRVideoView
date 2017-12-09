@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2224D1731FDB697B001692AF /* URLparameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2224D1721FDB697B001692AF /* URLparameter.swift */; };
 		22CFECA61F742B9F00BC9F46 /* TRVideoView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CFEC9C1F742B9F00BC9F46 /* TRVideoView.framework */; };
 		22CFECAD1F742B9F00BC9F46 /* TRVideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CFEC9F1F742B9F00BC9F46 /* TRVideoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22CFECB71F742C8200BC9F46 /* TRVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CFECB61F742C8200BC9F46 /* TRVideoView.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2224D1721FDB697B001692AF /* URLparameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLparameter.swift; sourceTree = "<group>"; };
 		22CFEC9C1F742B9F00BC9F46 /* TRVideoView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TRVideoView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CFEC9F1F742B9F00BC9F46 /* TRVideoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRVideoView.h; sourceTree = "<group>"; };
 		22CFECA01F742B9F00BC9F46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			children = (
 				22CFEC9F1F742B9F00BC9F46 /* TRVideoView.h */,
 				22CFECB61F742C8200BC9F46 /* TRVideoView.swift */,
+				2224D1721FDB697B001692AF /* URLparameter.swift */,
 				22CFECB81F742CD000BC9F46 /* extractURLs.swift */,
 				22CFECA01F742B9F00BC9F46 /* Info.plist */,
 			);
@@ -191,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22CFECB71F742C8200BC9F46 /* TRVideoView.swift in Sources */,
+				2224D1731FDB697B001692AF /* URLparameter.swift in Sources */,
 				22CFECB91F742CD000BC9F46 /* extractURLs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
