@@ -18,7 +18,10 @@ open class TRVideoView: WKWebView {
         self.init(frame: CGRect(x: 0, y: 0, width: 340, height: 180))
         self.text = text
         self.urls = text.extractURLs()
+        self.backgroundColor = .clear
+        self.isOpaque = false
         self.scrollView.isScrollEnabled = false
+
         setup()
     }
     
@@ -66,9 +69,19 @@ open class TRVideoView: WKWebView {
                 // Fool proof video ID decoding
                 var link = ""
                 if (url.host?.contains("youtube.com") ?? false) {
-                    link = "https://www.youtube.com/embed/"+url["v"]+"?rel=0"
+                    var _l = "https://www.youtube.com/embed/"+url["v"]+"?rel=0"
+                    let time = url["t"]
+                    if !time.isEmpty {
+                        _l += "&start=\(time)"
+                    }
+                    link = _l
                 } else if (url.host?.contains("youtu.be") ?? false) {
-                    link = "https://www.youtube.com/embed/"+url.lastPathComponent+"?rel=0"
+                    var _l = "https://www.youtube.com/embed/"+url.lastPathComponent+"?rel=0"
+                    let time = url["t"]
+                    if !time.isEmpty {
+                        _l += "&start=\(time)"
+                    }
+                    link = _l
                 }
                 
                 DispatchQueue.main.async(execute: { () -> Void in
