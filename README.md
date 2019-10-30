@@ -11,9 +11,9 @@ This is a simple drop in WKWebView for embedded videos from YouTube and vimeo.
 <img width="337" alt="screen shot 2017-09-21 at 1 48 26 pm" src="https://user-images.githubusercontent.com/13894518/33790932-bea56f8c-dc39-11e7-9152-d8825a8098eb.png">
 
 ## Requierments
-* iOS 9.0
-* Swift 3.2
-* Xcode 9 
+* iOS 10.0
+* Swift 5.0
+* Xcode 11
 
 ## Installation  
 ### CocoaPods
@@ -33,9 +33,12 @@ $ pod install
 ## Usage  
 ```swift
 // Initialize  
-let video = TRVideoView(text: "This is some sample text with a YouTube link https://www.youtube.com/watch?v=QPAloq5MCUA")  
+let video = TRVideoView(text: "This is some sample text with a YouTube link https://www.youtube.com/watch?v=QPAloq5MCUA")
 
-// Set the frame as always
+// Or to play inline, initialize as
+let video = TRVideoView(text: "This is some sample text with a YouTube link https://www.youtube.com/watch?v=QPAloq5MCUA", allowInlinePlayback: true)
+
+// Set the frame as always, or use AutoLayout
 video.frame = CGRect(x: 0, y: 0, width: 300, height: 150)
 
 // Returns true or false (checks for YouTube and Vimeo urls)
