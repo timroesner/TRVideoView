@@ -2,7 +2,8 @@ Pod::Spec.new do |s|
 
   # 1
   s.platform = :ios
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
+  s.swift_versions = '5.0'
   s.name = "TRVideoView"
   s.summary = "TRVideoView is a simple drop in WebView for embedded YouTube and Vimeo videos."
   s.requires_arc = true
