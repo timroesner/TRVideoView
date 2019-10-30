@@ -10,8 +10,17 @@ import UIKit
 import WebKit
 
 open class TRVideoView: WKWebView {
-    var text = ""
-    var urls = [URL]()
+    var text = "" {
+        didSet {
+            self.urls = text.extractURLs()
+        }
+    }
+
+    var urls = [URL]() {
+        didSet {
+            refreshContents()
+        }
+    }
 
     private var playsInline: Bool = false
 
@@ -31,28 +40,24 @@ open class TRVideoView: WKWebView {
 
         self.playsInline = allowInlinePlayback
 
-        self.text = text
-        self.urls = text.extractURLs()
-
         self.scrollView.isScrollEnabled = false
 
-        setup()
+        self.text = text
+        // NOTE: These two lines would normally be called by the didSet on text, but not if you're in an initializer
+        self.urls = text.extractURLs()
+        refreshContents()
     }
 
+    /// - Returns
+    ///    Whether this instance has urls it thinks it will be able to render
     open func containsURLs() -> Bool {
-        if(self.urls.isEmpty){
-            return false
-        } else {
-            var result = false
-            for url in self.urls {
-                if(url.absoluteString.contains("youtu") || url.absoluteString.contains("vimeo.com")){
-                    result = true
-                }
-            }
-            return result
+        return self.urls.contains { (url) -> Bool in
+            return url.host?.contains("youtu") ?? url.host?.contains("vimeo.com") ?? false
         }
     }
 
+    /// - Returns
+    ///    The contents of `text` with the extracted video urls removed
     open func textWithoutURLs() -> String{
         var result = self.text
 
@@ -64,39 +69,49 @@ open class TRVideoView: WKWebView {
         return result
     }
 
-    func setup() {
+    /// Called whenever the URLs are updated (or you can call it manually) to load the first video url found in text or set in URLs
+    /// into the body of this webview.
+    func refreshContents() {
 
         for url in self.urls {
-            
+
+            let videoLink: String?
+
             // If vimeo URL embedded vimeo player
-            if(url.absoluteString.contains("vimeo.com")) {
-                print(url.pathComponents)
+            if(url.host?.contains("vimeo.com") ?? false) {
+
                 let query = playsInline ? "?playsinline=1" : ""
-                let link = "https://player.vimeo.com/video/" + url.lastPathComponent + query
-                DispatchQueue.main.async(execute: { () -> Void in
-                    self.loadHTMLString("<head> <meta name=viewport content='width=device-width, initial-scale=1'><style type='text/css'> body { margin: 0;} </style></head><iframe src='\(link)' width='100%' height='100%' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>", baseURL: nil)
-                })
+                videoLink = "https://player.vimeo.com/video/" + url.lastPathComponent + query
 
             // If YouTube URL embedded YouTube player
-            } else if(url.absoluteString.contains("youtu")) {
+            } else if(url.host?.contains("youtu") ?? false) {
 
                 // Fool proof video ID decoding
-                let link: String
-
                 let host = "https://www.youtube.com/embed/"
                 let query = playsInline ? "?rel=0&playsinline=1" : "?rel=0"
                 if (url.host?.contains("youtube.com") ?? false) {
-                    link = host + url["v"] + query
+                    videoLink = host + url["v"] + query
                 } else if (url.host?.contains("youtu.be") ?? false) {
-                    link = host + url.lastPathComponent + query
+                    videoLink = host + url.lastPathComponent + query
                 } else {
-                    link = ""
+                    videoLink = nil
                 }
+            } else {
+                videoLink = nil
+            }
 
+            // Ok, if we found a video there, load it into the pane and then stop searching
+            if let link = videoLink {
                 DispatchQueue.main.async(execute: { () -> Void in
-                    self.loadHTMLString("<head> <meta name=viewport content='width=device-width, initial-scale=1'><style type='text/css'> body { margin: 0;} </style></head><iframe width='100%' height='100%' src='\(link)' frameborder='0' allowfullscreen></iframe>", baseURL: nil)
+                    self.loadHTMLString(self.iframeForLink(link), baseURL: nil)
                 })
+
+                break
             }
         }
+    }
+
+    internal func iframeForLink(_ link: String) -> String {
+        return "<head> <meta name=viewport content='width=device-width, initial-scale=1'><style type='text/css'> body { margin: 0;} </style></head><iframe src='\(link)' width='100%' height='100%' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
     }
 }
